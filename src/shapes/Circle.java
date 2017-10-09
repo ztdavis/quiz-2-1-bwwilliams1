@@ -8,12 +8,18 @@ public class Circle extends Shape {
 	 * below.  Circles cannot have a negative radius.
 	 */
 	public Circle(double radius) throws IllegalArgumentException {
-		// TODO Implement me
+		this.radius = radius;// constructs circle with a radius length
+		
+		//checks if radius is not negative
+		if(radius <= 0){
+			throw new IllegalArgumentException("Impossible Bounds");
+		}
 	}
 	
-	/*
-	 *  Implement any remaining methods demanded by the superclass.
-	 */
+	public double calculateArea(){
+		double area = 3.14 * radius * radius;
+		return area;
+	}
 	
 	public double getRadius() {
 		return radius;
